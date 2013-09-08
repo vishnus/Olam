@@ -1,0 +1,18 @@
+
+<resources>
+
+    <string name="app_name">Olam</string>    
+    <string name="sorry_not_found">ക്ഷമിക്കുക.. \n നിങ്ങള്‍ അന്വേഷിച്ച പദത്തിന്റെ അര്‍ഥം കണ്ടെത്താനായില്ല. \n \n സാധ്യമെങ്കില്‍, ദയവായി നിഘണ്ടുവില്‍ ചേര്‍ക്കുക.</string>    
+    <string name="menu_settings">Settings</string>    
+    <string name="title">ഓളം</string>    
+    <string name="hint">Type an English word</string>    
+	<string name="app_description">അതിവേഗ ഇംഗ്ലീഷ് → മലയാളം നിഘണ്ടു  </string>	
+	<string name="app_description_english">( The fast English-Malayalam Dictionary ) \n \n</string>	
+	<string name="olam_author">Olam By: &lt;a href="http://nadh.in">Kailash Nadh&lt;/a> &#032;&#032; | &#032;&#032;  App By: &lt;a href="http://vishnus.name">Vishnu S&lt;/a></string>	
+	<string name="just_a_new_line">\n</string>	
+	<string name="olam_url">&lt;a href="http://olam.in">Olam.in&lt;/a> - 2013</string>
+	
+	<string name="noun">നാമം :noun</string>
+	<string name="verb">ക്രിയ :verb</string>
+	<string name="adjective">വിശേഷണം :adjective</string>
+</resources>
