@@ -98,7 +98,7 @@ public class MainSearch extends Activity {
 					editText = (EditText) findViewById(R.id.editText1);
 					String searchString = editText.getText().toString();
 					
-					if(searchString != null && !searchString.isEmpty()) {	
+					if(searchString.trim().length() != 0 && !searchString.isEmpty()) {
 						resLayout.removeAllViews();					
 						new doSearch().execute();
 					}
@@ -121,7 +121,7 @@ public class MainSearch extends Activity {
 			            //do something
 			        	String searchString = editText.getText().toString();
 			        	
-						if(searchString != null && !searchString.isEmpty()) {	
+						if(searchString.trim().length() != 0 && !searchString.isEmpty()) {
 							resLayout.removeAllViews();					
 							new doSearch().execute();
 						}
@@ -246,6 +246,23 @@ public class MainSearch extends Activity {
 			// TODO Auto-generated method stub
 			EditText editText = (EditText) findViewById(R.id.editText1);
 			searchString = editText.getText().toString();
+
+			//Logic for cancelling out apostrophe from entered query.
+			if (searchString.contains("'")) {
+
+				/*
+				 temp is a StringBuilder used to store searchString after filtering out
+				 apostrophe.
+				 */
+				StringBuilder temp = new StringBuilder();
+				for (char c : searchString.toCharArray()) {
+					if (c != '\'')
+						temp.append(c);
+				}
+				searchString = temp.toString();
+				if (searchString.trim().equals(""))
+					searchString = ":";
+			}
 			
 			Log.v(TAG, searchString);
 			if(searchString != null && !searchString.isEmpty()) {				
